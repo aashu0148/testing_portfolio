@@ -1,0 +1,54 @@
+@import "styles/variables";
+
+.container {
+  position: fixed;
+  bottom: 0;
+  left: 25px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .icon {
+      transition: 250ms;
+
+      &:hover {
+        svg {
+          transform: translateY(-4px);
+          color: $green;
+        }
+      }
+
+      svg {
+        transition: 250ms;
+        height: 24px;
+        width: 24px;
+        color: $gray;
+      }
+    }
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .line {
+    transform: translateX(10px);
+    height: 100px;
+    width: 2px;
+    background-color: $gray;
+    opacity: 0;
+    animation: show 300ms forwards;
+  }
+}

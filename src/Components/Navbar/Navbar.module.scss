@@ -1,0 +1,57 @@
+@import "styles/variables";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 25px;
+  backdrop-filter: blur(30px);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: 250ms;
+  background-color: #162236ba;
+  z-index: 1000;
+
+  .right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    ul {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      li {
+        list-style: none;
+        display: flex;
+        align-items: flex-end;
+        gap: 2px;
+        cursor: pointer;
+        font-family: $mono;
+        font-size: 16px;
+
+        &:hover {
+          p {
+            color: $green;
+          }
+        }
+
+        span {
+          color: $green;
+          font-weight: 600;
+          font: inherit;
+        }
+
+        p {
+          color: $white;
+          transition: 250ms;
+          letter-spacing: 1px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

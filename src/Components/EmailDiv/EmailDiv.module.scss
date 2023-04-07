@@ -1,0 +1,44 @@
+@import "styles/variables";
+
+.container {
+  position: fixed;
+  bottom: 0;
+  right: 25px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .text {
+    writing-mode: vertical-rl;
+    font-family: $mono;
+    color: $gray;
+    width: 20px;
+    letter-spacing: 1px;
+    transition: 250ms;
+    font-size: 16px;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .line {
+    transform: translateX(10px);
+    height: 100px;
+    width: 2px;
+    background-color: $gray;
+    opacity: 0;
+    animation: show 300ms forwards;
+  }
+}
