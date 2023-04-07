@@ -8,7 +8,7 @@ import Socials from "Components/Socials/Socials";
 import EmailDiv from "Components/EmailDiv/EmailDiv";
 
 export default function Home() {
-  const [pageLoading, setPageLoading] = useState(false);
+  const [pageLoading, setPageLoading] = useState(true);
 
   const handleObserver = (entries) => {
     entries.forEach((entry) => {
