@@ -34,7 +34,7 @@
       background-color: $gray;
       height: 1px;
       width: max(100px, 25%);
-      opacity: 0.6;
+      opacity: 0.4;
     }
   }
 
@@ -66,19 +66,6 @@
         li {
           min-width: 150px;
           width: fit-content;
-          color: $gray;
-          font-size: 18px;
-          accent-color: $green;
-          list-style: none;
-
-          &::before {
-            content: "\25B8";
-            color: $green;
-            font-weight: bold;
-            display: inline-block;
-            width: 20px;
-            margin-left: -20px;
-          }
         }
       }
     }

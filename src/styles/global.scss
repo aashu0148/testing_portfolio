@@ -8,6 +8,7 @@
   margin: 0;
   font-family: "Inter", sans-serif;
   color-scheme: dark;
+  color: $white;
 }
 
 html {
@@ -60,6 +61,21 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.list-item {
+  color: $gray;
+  font-size: 18px;
+  list-style: none;
+
+  &::before {
+    content: "\25B8";
+    color: $green;
+    font-weight: bold;
+    display: inline-block;
+    width: 20px;
+    margin-left: -20px;
+  }
 }
 
 .button {

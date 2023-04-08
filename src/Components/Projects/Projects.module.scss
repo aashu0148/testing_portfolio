@@ -1,0 +1,124 @@
+@import "styles/variables";
+
+.container {
+  height: fit-content;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+
+  .heading {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+
+    span {
+      color: $green;
+      font-weight: 600;
+      font-size: clamp(14px, 4vw, 26px);
+      margin-bottom: 2px;
+      font-family: $mono;
+    }
+
+    p {
+      font-size: clamp(16px, 5vw, 32px);
+      font-weight: bold;
+    }
+
+    .line {
+      margin-bottom: 15px;
+      background-color: $gray;
+      height: 1px;
+      width: max(100px, 25%);
+      opacity: 0.4;
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .project {
+      display: flex;
+      align-items: center;
+      position: relative;
+      min-height: 400px;
+      justify-content: flex-end;
+      width: 100%;
+
+      .left {
+        position: absolute;
+        left: 0;
+        max-width: 55%;
+        z-index: 1;
+        transform: translateY(-40px);
+
+        @media (min-width: 1100px) {
+          transform: translateY(-10px);
+        }
+      }
+
+      .right {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: flex-end;
+        max-width: min(70%, 620px);
+        position: relative;
+        z-index: 10;
+
+        .label {
+          font-size: 18px;
+          font-family: $mono;
+          color: $green;
+        }
+
+        .title {
+          font-size: 24px;
+          font-weight: bold;
+          color: $white;
+        }
+
+        .box {
+          background-color: $dark-blue-3;
+          border-radius: 4px;
+          padding: 24px;
+          font-size: 18px;
+          line-height: 28px;
+          color: $gray;
+        }
+
+        .tech {
+          display: flex;
+          gap: 30px;
+          align-items: center;
+          flex-wrap: wrap;
+          align-items: center;
+
+          .item {
+            font-size: 16px;
+            color: $gray;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    .invert {
+      justify-content: flex-start;
+
+      .left {
+        left: auto;
+        right: 0;
+      }
+
+      .right {
+        align-items: flex-start;
+      }
+    }
+  }
+}

@@ -8,7 +8,7 @@ import Socials from "Components/Socials/Socials";
 import EmailDiv from "Components/EmailDiv/EmailDiv";
 
 export default function Home() {
-  const [pageLoading, setPageLoading] = useState(true);
+  const [pageLoading, setPageLoading] = useState(false);
 
   const handleObserver = (entries) => {
     entries.forEach((entry) => {
@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Anshul</title>
         <meta
           name="description"
           content="Portfolio website developed by and for Anshul"
@@ -56,7 +56,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/logox512.png"></link>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#8dfba0" />
+        <meta name="theme-color" content="#121d32" />
         <meta name="title" content="Anshul" />
       </Head>
       {pageLoading ? (

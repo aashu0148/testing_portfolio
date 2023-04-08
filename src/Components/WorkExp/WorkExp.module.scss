@@ -5,11 +5,10 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
   justify-content: center;
-  margin: 0 auto;
   width: 100%;
-  max-width: 1020px;
+  max-width: 850px;
 
   .heading {
     display: flex;
@@ -34,7 +33,86 @@
       background-color: $gray;
       height: 1px;
       width: max(100px, 25%);
-      opacity: 0.6;
+      opacity: 0.4;
+    }
+  }
+
+  .body {
+    display: flex;
+    gap: 50px;
+
+    .companyList {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .indicator {
+        height: 50px;
+        width: 0;
+        border-left: 2px solid $green;
+        border-radius: 10px;
+        transition: 250ms;
+        background-color: $green;
+        position: absolute;
+        left: 0;
+        top: calc(var(--active-index) * 48px);
+        z-index: 10;
+      }
+
+      .item {
+        padding: 15px 20px;
+        color: $gray;
+        border-left: 2px solid $gray;
+        cursor: pointer;
+        background-color: transparent;
+        transition: 250ms;
+        font-size: 16px;
+        font-weight: 500;
+
+        &:hover {
+          background-color: $blue-shade;
+          color: $green;
+        }
+      }
+
+      .active {
+        color: $green;
+      }
+    }
+
+    .explanation {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      .detail {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .title {
+        font-size: 22px;
+        font-weight: 600;
+        color: $white;
+      }
+
+      .desc {
+        color: $gray;
+        font-size: 16px;
+      }
+
+      ul {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        li {
+          font-size: 16px;
+          line-height: 25px;
+        }
+      }
     }
   }
 }
