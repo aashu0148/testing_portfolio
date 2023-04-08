@@ -7,6 +7,7 @@ import Navbar from "Components/Navbar/Navbar";
 import Socials from "Components/Socials/Socials";
 import EmailDiv from "Components/EmailDiv/EmailDiv";
 
+let trailingElement, mouseMoveTimeout;
 export default function Home() {
   const [pageLoading, setPageLoading] = useState(true);
 
@@ -22,8 +23,39 @@ export default function Home() {
     });
   };
 
+  const handleMouseMove = (event) => {
+    if (!trailingElement || window.outerWidth < 768) return;
+
+    const x = event.clientX;
+    const y = event.clientY;
+
+    clearTimeout(mouseMoveTimeout);
+    mouseMoveTimeout = setTimeout(
+      () => (trailingElement.style.opacity = "0"),
+      500
+    );
+
+    trailingElement.style.opacity = "1";
+    trailingElement.style.top = `${y - 10}px`;
+    trailingElement.style.left = `${x - 10}px`;
+  };
+
+  const handleUrlAnchorScroll = () => {
+    const anchor = window.location.href.split("#")[1];
+    if (!anchor) return;
+
+    const elem = document.querySelector(`div[id=${anchor}]`);
+    if (!elem) return;
+
+    elem.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     if (pageLoading) return;
+
+    handleUrlAnchorScroll();
 
     const popOutElems = Array.from(document.querySelectorAll(".animate-up"));
     const popDownElems = Array.from(document.querySelectorAll(".animate-down"));
@@ -33,8 +65,14 @@ export default function Home() {
 
     allElems.forEach((elem) => observer.observe(elem));
 
+    trailingElement = document.querySelector("#trail");
+
+    if (trailingElement) window.addEventListener("mousemove", handleMouseMove);
+
     return () => {
       allElems.forEach((elem) => observer.unobserve(elem));
+
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, [pageLoading]);
 
@@ -65,6 +103,7 @@ export default function Home() {
         </div>
       ) : (
         <>
+          <div id="trail" />
           <Navbar />
           <Socials />
           <EmailDiv />
