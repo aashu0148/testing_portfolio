@@ -32,7 +32,7 @@ export default function Home() {
     clearTimeout(mouseMoveTimeout);
     mouseMoveTimeout = setTimeout(
       () => (trailingElement.style.opacity = "0"),
-      500
+      200
     );
 
     trailingElement.style.opacity = "1";

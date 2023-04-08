@@ -9,6 +9,7 @@
   font-family: "Inter", sans-serif;
   color-scheme: dark;
   color: $white;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -60,14 +61,15 @@ a {
   pointer-events: none;
   top: -200px;
   left: -200px;
-  z-index: 100;
-  background-color: $white;
+  z-index: 50;
+  background-color: transparent;
   height: 8px;
   width: 8px;
   transition: opacity 500ms;
   border-radius: 50%;
-  box-shadow: 0 0 5px 1px $white, 0 0 8px 2px $white, 0 0 10px 3px $white,
-    0 0 15px 4px $white, 0 0 20px 5px $white, 0 0 25px 6px $white;
+  box-shadow: 0 0 5px 1px $gray, 0 0 8px 2px $gray, 0 0 10px 3px $gray,
+    0 0 15px 4px $gray, 0 0 20px 5px $gray, 0 0 25px 6px $gray,
+    inset 0 0 5px 2px $gray, inset 0 0 8px 4px $gray;
 }
 
 .loader-container {
@@ -108,6 +110,7 @@ a {
   transition: 250ms;
   font-size: 14px;
   transition: 250ms;
+  z-index: 55;
 
   &:hover {
     background-color: $dark-blue-3;
@@ -170,6 +173,7 @@ a {
   color: $green;
   position: relative;
   cursor: pointer;
+  z-index: 55;
 
   &::before {
     content: "";

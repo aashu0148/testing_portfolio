@@ -17,11 +17,12 @@
 
     .icon {
       transition: 250ms;
+      z-index: 55;
 
       &:hover {
         svg {
           transform: translateY(-4px);
-          color: $green;
+          stroke: $green;
         }
       }
 
@@ -29,7 +30,7 @@
         transition: 250ms;
         height: 24px;
         width: 24px;
-        color: $gray;
+        stroke: $gray;
       }
     }
   }
