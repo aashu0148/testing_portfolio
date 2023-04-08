@@ -45,7 +45,7 @@ function Projects() {
       <div className={styles.body}>
         {projects.map((project, i) => (
           <div
-            ley={project.title + i}
+            key={project.title + i}
             className={`${styles.project} ${i % 2 == 0 ? "" : styles.invert}`}
           >
             <div
