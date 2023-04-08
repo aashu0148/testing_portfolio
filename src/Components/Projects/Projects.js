@@ -13,21 +13,21 @@ function Projects() {
     },
     {
       thumbnail: "/images/comparable.png",
-      title: "Comparbale",
+      title: "Comparbale.",
       tech: ["Next.js", "Node.js", "CSS", "RabbitMQ", "puppeteer"],
       github: "https://github.com/aashu0148/portfolio",
       desc: "This is some description. This is some description. This is some description. This is some description. This is some description. This is some description. This is some description. This is some description. This is some description. This is some description",
     },
     {
       thumbnail: "/images/comparable.png",
-      title: "Comparbale",
+      title: "Comparbale..",
       tech: ["Next.js", "Node.js", "CSS", "RabbitMQ", "puppeteer"],
       github: "https://github.com/aashu0148/portfolio",
       desc: "This is some description. This is some description. This is some description. This is some description. This is some description. This is some description. This is some description. This is some description. This is some description. This is some description",
     },
     {
       thumbnail: "/images/comparable.png",
-      title: "Comparbale",
+      title: "Comparbale...",
       tech: ["Next.js", "Node.js", "CSS", "RabbitMQ", "puppeteer"],
       github: "https://github.com/aashu0148/portfolio",
       desc: "This is some description. This is some description. This is some description. This is some description. This is some description. This is some description. This is some description. This is some description. This is some description. This is some description",
@@ -45,6 +45,7 @@ function Projects() {
       <div className={styles.body}>
         {projects.map((project, i) => (
           <div
+            ley={project.title + i}
             className={`${styles.project} ${i % 2 == 0 ? "" : styles.invert}`}
           >
             <div
@@ -76,7 +77,9 @@ function Projects() {
                 style={{ animationDelay: "300ms" }}
               >
                 {project.tech.map((item) => (
-                  <p className={styles.item}>{item}</p>
+                  <p className={styles.item} key={item + project.title}>
+                    {item}
+                  </p>
                 ))}
               </div>
 

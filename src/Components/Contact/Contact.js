@@ -8,13 +8,13 @@ function Contact() {
       <div className={styles.detail}>
         <div className={styles.heading}>
           <span>04.</span>
-          What's Next?
+          {"What's"} Next?
         </div>
         <p
           className={`animate-up ${styles.title}`}
           style={{ animationDelay: "100ms" }}
         >
-          Let's Connect
+          {"Let's"} Connect
         </p>
       </div>
 
