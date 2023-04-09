@@ -8,14 +8,14 @@ import Contact from "Components/Contact/Contact";
 
 import styles from "./MainContent.module.scss";
 
-function MainContent() {
+function MainContent({ isMobileView = false }) {
   return (
     <main className={styles.container}>
-      <Hero />
-      <About />
-      <WorkExp />
-      <Projects />
-      <Contact />
+      <Hero isMobileView={isMobileView} />
+      <About isMobileView={isMobileView} />
+      <WorkExp isMobileView={isMobileView} />
+      <Projects isMobileView={isMobileView} />
+      <Contact isMobileView={isMobileView} />
     </main>
   );
 }

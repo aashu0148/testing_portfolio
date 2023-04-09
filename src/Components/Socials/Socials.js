@@ -40,6 +40,7 @@ function Socials() {
           </a>
         ))}
       </div>
+
       <span className={`${styles.line}`} style={{ animationDelay: "1s" }} />
     </div>
   );

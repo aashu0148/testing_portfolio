@@ -54,4 +54,77 @@
       }
     }
   }
+
+  .burger {
+    cursor: pointer;
+    width: fit-content;
+
+    svg {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px 25px;
+
+    .backdrop {
+      padding: 20px 20px;
+      width: 75%;
+      min-width: 275px;
+      background-color: #121d32ba;
+    }
+
+    .logo {
+      div {
+        height: 38px;
+        width: 38px;
+      }
+    }
+
+    .right {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+
+      .closeIcon {
+        cursor: pointer;
+        margin-left: auto;
+
+        svg {
+          height: 24px;
+          width: 24px;
+        }
+      }
+
+      ul {
+        width: 100%;
+        height: 70%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        li {
+          font-size: 22px;
+
+          &:hover {
+            p {
+              color: $green;
+            }
+          }
+
+          p {
+            font-size: 22px;
+          }
+        }
+      }
+
+      button {
+        margin: 0 auto;
+        font-size: 22px;
+      }
+    }
+  }
 }

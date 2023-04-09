@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./Projects.module.scss";
 
-function Projects() {
+function Projects({ isMobileView }) {
   const projects = [
     {
       thumbnail: "/images/comparable.png",

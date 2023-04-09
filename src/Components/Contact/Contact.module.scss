@@ -10,8 +10,16 @@
   margin: 0 auto;
   width: 100%;
   max-width: 620px;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
   position: relative;
+
+  .body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+  }
 
   .heading {
     color: $green;
@@ -60,14 +68,21 @@
     font-size: 18px;
   }
 
-  .footer {
-    position: absolute;
-    bottom: 50px;
-    left: 31%;
-    letter-spacing: 1px;
-    font-family: $mono;
-    font-weight: 400;
-    font-size: 16px;
-    color: $white;
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    .footerText {
+      // position: absolute;
+      // bottom: 50px;
+      // left: 31%;
+      letter-spacing: 1px;
+      font-family: $mono;
+      font-weight: 400;
+      font-size: 16px;
+      color: $white;
+    }
   }
 }

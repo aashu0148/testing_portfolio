@@ -52,4 +52,37 @@
     opacity: 0;
     animation: show 300ms forwards;
   }
+
+  @media (max-width: 768px) {
+    position: static;
+    flex-direction: row;
+
+    .icons {
+      flex-direction: row;
+      gap: 20px;
+
+      .icon {
+        transition: 250ms;
+        z-index: 55;
+
+        &:hover {
+          svg {
+            transform: translateY(-4px);
+            stroke: $green;
+          }
+        }
+
+        svg {
+          transition: 250ms;
+          height: 24px;
+          width: 24px;
+          stroke: $gray;
+        }
+      }
+    }
+
+    .line {
+      display: none;
+    }
+  }
 }

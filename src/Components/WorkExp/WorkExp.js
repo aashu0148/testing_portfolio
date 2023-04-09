@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "./WorkExp.module.scss";
 import { getDateFormatted } from "util.js";
 
-function WorkExp() {
+function WorkExp({ isMobileView = false }) {
   const experiences = [
     {
       company: "Hushl",

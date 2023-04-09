@@ -10,6 +10,7 @@ import EmailDiv from "Components/EmailDiv/EmailDiv";
 let trailingElement, mouseMoveTimeout;
 export default function Home() {
   const [pageLoading, setPageLoading] = useState(true);
+  const [isMobileView, setIsMobileView] = useState(false);
 
   const handleObserver = (entries) => {
     entries.forEach((entry) => {
@@ -52,6 +53,12 @@ export default function Home() {
     });
   };
 
+  const handleWindowResize = () => {
+    const width = window.innerWidth;
+
+    setIsMobileView(width < 770);
+  };
+
   useEffect(() => {
     if (pageLoading) return;
 
@@ -77,9 +84,16 @@ export default function Home() {
   }, [pageLoading]);
 
   useEffect(() => {
+    handleWindowResize();
+    window.addEventListener("resize", handleWindowResize);
+
     setTimeout(() => {
       setPageLoading(false);
     }, 3000);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
   }, []);
 
   return (
@@ -104,10 +118,17 @@ export default function Home() {
       ) : (
         <>
           <div id="trail" />
-          <Navbar />
-          <Socials />
-          <EmailDiv />
-          <MainContent />
+          <Navbar isMobileView={isMobileView} />
+          <MainContent isMobileView={isMobileView} />
+
+          {isMobileView ? (
+            ""
+          ) : (
+            <>
+              <Socials isMobileView={isMobileView} />
+              <EmailDiv isMobileView={isMobileView} />
+            </>
+          )}
         </>
       )}
     </>
