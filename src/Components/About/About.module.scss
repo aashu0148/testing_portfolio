@@ -89,4 +89,58 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+    .heading {
+      gap: 5px;
+
+      span {
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 22px;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+
+      .line {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        width: max(250px, 25%);
+        width: 100%;
+      }
+    }
+
+    .body {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .about {
+        gap: 15px;
+
+        .text {
+          font-size: 14px;
+          line-height: 22px;
+        }
+
+        .list {
+          height: fit-content;
+
+          li {
+            min-width: 120px;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .photoDiv {
+        margin: 0 auto;
+        height: 240px;
+        width: 240px;
+      }
+    }
+  }
 }

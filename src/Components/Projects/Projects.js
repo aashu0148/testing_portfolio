@@ -48,14 +48,18 @@ function Projects({ isMobileView }) {
             key={project.title + i}
             className={`${styles.project} ${i % 2 == 0 ? "" : styles.invert}`}
           >
-            <div
-              className={`animate-up ${styles.left}`}
-              style={{ animationDelay: "200ms" }}
-            >
-              <div className="image">
-                <img src={project.thumbnail} alt={project.title} />
+            {isMobileView ? (
+              ""
+            ) : (
+              <div
+                className={`animate-up ${styles.left}`}
+                style={{ animationDelay: "200ms" }}
+              >
+                <div className="image">
+                  <img src={project.thumbnail} alt={project.title} />
+                </div>
               </div>
-            </div>
+            )}
 
             <div className={styles.right}>
               {/* <p className={styles.label}>Featured Project</p> */}
@@ -65,12 +69,23 @@ function Projects({ isMobileView }) {
               >
                 {project.title}
               </p>
-              <p
-                className={`animate-up ${styles.box}`}
-                style={{ animationDelay: "200ms" }}
-              >
-                {project.desc}
-              </p>
+              <div className={styles.boxOuter}>
+                <p
+                  className={`animate-up ${styles.box}`}
+                  style={{ animationDelay: "200ms" }}
+                >
+                  {project.desc}
+                </p>
+                {isMobileView ? (
+                  <div className={styles.bg}>
+                    <div className="image">
+                      <img src={project.thumbnail} alt={project.title} />
+                    </div>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
 
               <div
                 className={`animate-up ${styles.tech}`}

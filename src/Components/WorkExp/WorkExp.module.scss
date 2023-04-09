@@ -115,4 +115,87 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+    .heading {
+      gap: 5px;
+
+      span {
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 22px;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+
+      .line {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        width: max(250px, 25%);
+        width: 100%;
+      }
+    }
+
+    .body {
+      gap: 25px;
+      flex-direction: column;
+
+      .companyList {
+        flex-direction: row;
+        width: 100%;
+
+        .indicator {
+          width: calc(100% / 3);
+          height: 0;
+          border-left: none;
+          border-bottom: 2px solid $green;
+          top: auto;
+          bottom: 0;
+          left: calc(var(--active-index) * calc(100% / 3));
+        }
+
+        .item {
+          text-align: center;
+          flex: 1;
+          padding: 10px;
+          border-bottom: 1px solid $gray;
+          border-left: none;
+          font-size: 14px;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+
+      .explanation {
+        gap: 20px;
+
+        .detail {
+          gap: 8px;
+        }
+
+        .title {
+          font-size: 16px;
+        }
+
+        .desc {
+          font-size: 14px;
+        }
+
+        ul {
+          padding-left: 20px;
+          gap: 15px;
+
+          li {
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
 }
