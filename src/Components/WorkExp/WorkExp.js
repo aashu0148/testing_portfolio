@@ -11,13 +11,14 @@ function WorkExp({ isMobileView = false }) {
       certificate: "https://hushl.in",
       companyLink: "https://hushl.in",
       duration: {
-        start: "07-15-2022", // mm-dd-yyyy
+        start: "07/15/2022", // mm/dd/yyyy
         end: Date.now(),
       },
       points: [
-        "Working in a small team to build AI powered tools that will change the future of content creation.",
-        "Working in a fast pace environment and we have build a product in a record time of 20 days (MVP)",
-        "Developed complex CSS designs with perfection.",
+        "Created powerful chrome extensions for Twitter and LinkedIn with AI features for content creators",
+        "Developed AI powered tools for content creation in a small team environment",
+        "Focused on design to produce aesthetically pleasing and delightful interfaces with pure CSS",
+        "Built an MVP product in record time of 20 days in a fast-paced environment",
       ],
     },
     {
@@ -27,14 +28,26 @@ function WorkExp({ isMobileView = false }) {
         "https://drive.google.com/file/d/1UNF5avIURMEEULbnVqNqAkX1GSBt0Pht/view?usp=drivesdk",
       companyLink: "https://cuvette.tech",
       duration: {
-        start: "06-08-2021", // mm-dd-yyyy
-        end: "06-08-2022",
+        start: "06/08/2021", // mm/dd/yyyy
+        end: "06/08/2022",
       },
       points: [
-        "With a team of 4 people managed to deliver a product that is used by over 4.5 lakh users per month within just 1 year.",
-        "Worked closely with designer to delivery exact Figma wireframes into development.",
-        "This is point number 3",
-        "Implemented the whole client side of Notification system using firebase.",
+        "Collaborated with a team of 4 to successfully launch a product with over 450k monthly active users in just a year.",
+        // "Worked closely with designers to accurately translate Figma wireframes into functional interfaces.",
+        "Led the implementation of a client-side notification system using Firebase.",
+        "Developed a Progressive Web App (PWA) for a React application, improving user experience and engagement.",
+        <li className="list-item" key="one-c">
+          Created a feature-rich text editor on top of DraftJS, which is now
+          available on{" "}
+          <a
+            href="https://www.npmjs.com/package/cuvette-text-editor"
+            target="_blank"
+            className="link"
+          >
+            npm
+          </a>{" "}
+          for other developers to use.
+        </li>,
       ],
     },
     {
@@ -43,12 +56,13 @@ function WorkExp({ isMobileView = false }) {
       certificate:
         "https://drive.google.com/file/d/1jh1seLahT6f0lSh0ByDBF-yPh9W_GFFa/view",
       duration: {
-        start: "03-17-2021", // mm-dd-yyyy
-        end: "05-22-2021",
+        start: "03/17/2021", // mm/dd/yyyy
+        end: "05/22/2021",
       },
       points: [
-        "I have developed the whole frontend keeping sync with backend for ninjasalary.",
-        "Worked with a lot of tabular data and used Data Table library to do so.",
+        "Developed and maintained the entire frontend of a web application, ensuring seamless integration with the backend.",
+        "Successfully managed and presented a large amount of tabular data using the DataTable library.",
+        "Created a full user authentication system on the frontend, utilizing tokens for secure and efficient user management.",
       ],
     },
   ];
@@ -116,11 +130,15 @@ function WorkExp({ isMobileView = false }) {
             className={`animate-up ${styles.list}`}
             style={{ animationDelay: `300ms` }}
           >
-            {selectedExp.points.map((point, i) => (
-              <li className="list-item" key={point}>
-                {point}
-              </li>
-            ))}
+            {selectedExp.points.map((point, i) =>
+              typeof point == "string" ? (
+                <li className="list-item" key={point}>
+                  {point}
+                </li>
+              ) : (
+                point
+              )
+            )}
           </ul>
         </div>
       </div>

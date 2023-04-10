@@ -41,9 +41,9 @@ function About() {
           >
             I have experience in working with backend from making normal Api
             calls to database to building backend systems like queuing and
-            scrapers for eCommerce websites such as Amazon, Flipkart, and
-            Myntra. Recently, I built a Chrome extension using React, which was
-            a fun and challenging project.
+            scrapers to scrape data from eCommerce websites such as Amazon,
+            Flipkart, and Myntra. Recently, I built a Chrome extension using
+            React, which was a fun and challenging project.
           </p>
 
           <p

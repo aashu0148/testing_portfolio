@@ -76,6 +76,11 @@
       border: 2px solid $green;
       border-radius: 2px;
 
+      @media (max-width: 1000px) {
+        height: 250px;
+        width: 250px;
+      }
+
       &:hover {
         .image {
           transform: translate(-8px, -8px);
