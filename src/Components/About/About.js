@@ -57,10 +57,10 @@ function About() {
             className={`animate-up ${styles.list}`}
             style={{ animationDelay: `${500}ms` }}
           >
-            <li className="list-item">CSS</li>
             <li className="list-item">React.js</li>
-            <li className="list-item">Chrome extension</li>
             <li className="list-item">Next.js</li>
+            <li className="list-item">Chrome extension</li>
+            <li className="list-item">CSS</li>
             <li className="list-item">Node.js</li>
           </ul>
         </div>
