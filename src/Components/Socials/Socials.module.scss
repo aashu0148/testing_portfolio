@@ -21,7 +21,7 @@
 
       &:hover {
         svg {
-          // transform: translateY(-4px);
+          transform: translateY(-2px);
           stroke: $green;
         }
       }
@@ -68,7 +68,6 @@
         &:hover {
           svg {
             transform: translateY(-4px);
-            stroke: $green;
           }
         }
 

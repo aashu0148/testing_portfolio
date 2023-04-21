@@ -91,9 +91,15 @@ function Navbar({ isMobileView = false }) {
           </li>
         ))}
       </ul>
-      <button className={`button pop-down`} style={{ animationDelay: "500ms" }}>
-        Resume
-      </button>
+
+      <a href="/anshul-resume.pdf" download>
+        <button
+          className={`button pop-down`}
+          style={{ animationDelay: "500ms" }}
+        >
+          Resume
+        </button>
+      </a>
     </div>
   );
 

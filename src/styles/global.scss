@@ -124,6 +124,12 @@ a {
   &:active {
     transform: scale(0.96);
   }
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+    padding: 10px 16px;
+    margin: 2px;
+  }
 }
 
 @keyframes pop-down {
@@ -194,6 +200,10 @@ a {
 
   &:hover::before {
     width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
   }
 }
 
