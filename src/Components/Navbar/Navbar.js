@@ -92,7 +92,7 @@ function Navbar({ isMobileView = false }) {
         ))}
       </ul>
 
-      <a href="/anshul-resume.pdf" download>
+      <a href="/anshul-resume.pdf" download style={{ width: "fit-content" }}>
         <button
           className={`button pop-down`}
           style={{ animationDelay: "500ms" }}
