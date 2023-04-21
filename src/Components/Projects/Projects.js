@@ -112,7 +112,7 @@ function Projects({ isMobileView }) {
       </div>
 
       <div className={styles.footer}>
-        <p className={styles.title}>It's not the end!</p>
+        <p className={styles.title}>{"It's"} not the end!</p>
         <p className={styles.desc}>
           I do have a lot more project, its my hobby to create something in free
           time. I keep on building new and interesting stuff as i get time,
