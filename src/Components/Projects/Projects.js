@@ -13,7 +13,7 @@ function Projects({ isMobileView }) {
       // desc: "Comparable is a web application that allows users to compare prices of hotels and e-commerce products across multiple websites. The app utilizes web scraping to collect pricing data from popular websites like Goibibo, Amazon, Myntra and 14 more. The frontend is designed using Next.js and pure CSS based on Figma wireframes, creating a visually appealing and user-friendly interface. The app establishes real-time communication between the server and client via a socket connection, enabling users to receive instant feedback. Additionally, the app implements RabbitMQ messaging queue to allow parallel processing of requests across 3 consumer servers, ensuring fast and efficient response times. Overall, Comparable provides users with a seamless and efficient way to compare prices across multiple websites, helping them find the best deals possible.",
     },
     {
-      thumbnail: "/images/grocery-store.png",
+      thumbnail: "/images/grocery.gif",
       title: "Grocery Store",
       tech: ["React.js", "Node.js", "CSS", "Firebase", "Mongodb"],
       github: "https://github.com/aashu0148/grocery-store",
@@ -114,8 +114,8 @@ function Projects({ isMobileView }) {
       <div className={styles.footer}>
         <p className={styles.title}>{"It's"} not the end!</p>
         <p className={styles.desc}>
-          I do have a lot more project, its my hobby to create something in free
-          time. I keep on building new and interesting stuff as i get time,
+          I do have a lot more projects, its my hobby to create something in
+          free time. I keep on building new and interesting stuff as i get time,
           checkout out my{" "}
           <a
             className="link"
