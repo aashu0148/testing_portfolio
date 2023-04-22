@@ -69,10 +69,7 @@ function About() {
           style={{ animationDelay: "400ms" }}
         >
           <div className={`image ${styles.image}`}>
-            <img
-              src="https://cdn.pixabay.com/photo/2022/10/12/00/17/woman-7515384__340.jpg"
-              alt="Anshul"
-            />
+            <img src="/images/profile.jpg" alt="Anshul" />
           </div>
         </div>
       </div>
