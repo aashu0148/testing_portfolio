@@ -27,7 +27,7 @@ function Contact({ isMobileView }) {
           I am currently seeking a fully remote frontend engineer position. If
           you have any available opportunities or would only like to connect,
           feel free to reach out to me. I am always open to answering any
-          questions or simply saying hello, so don't hesitate to get in touch!
+          questions or simply saying hello, so don’t hesitate to get in touch!
         </p>
 
         <a
