@@ -24,9 +24,10 @@ function Contact({ isMobileView }) {
           className={`animate-up ${styles.desc}`}
           style={{ animationDelay: "200ms" }}
         >
-          Although I’m not currently looking for any new opportunities, my inbox
-          is always open. Whether you have a question or just want to say hi,
-          I’ll try my best to get back to you!
+          I am currently seeking a fully remote frontend engineer position. If
+          you have any available opportunities or would only like to connect,
+          feel free to reach out to me. I am always open to answering any
+          questions or simply saying hello, so don't hesitate to get in touch!
         </p>
 
         <a

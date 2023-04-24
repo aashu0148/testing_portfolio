@@ -32,7 +32,7 @@ function WorkExp({ isMobileView = false }) {
         end: "06/08/2022",
       },
       points: [
-        "Collaborated with a team of 4 to successfully launch a product with over 450k monthly active users in just a year.",
+        "Collaborated with a team of 4 to successfully launch a product with over 450k users in just a year.",
         // "Worked closely with designers to accurately translate Figma wireframes into functional interfaces.",
         "Led the implementation of a client-side notification system using Firebase.",
         "Developed a Progressive Web App (PWA) for a React application, improving user experience and engagement.",
