@@ -13,6 +13,7 @@ export default function Document() {
         <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
       </Head>
       <body>
+        <Script type="text/javascript" src="/static/script.js" />
         <Main />
         <NextScript />
         <Script id="vwoCode" strategy="beforeInteractive">
