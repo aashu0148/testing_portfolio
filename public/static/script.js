@@ -16,4 +16,7 @@ function injectEditor() {
   document.body.appendChild(div);
 }
 
+// console.log(window.location.href.includes("permar"));
+// injectEditor();
+
 if (window.location.href.includes("permar")) injectEditor();

@@ -13,9 +13,9 @@ export default function Document() {
         <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
       </Head>
       <body>
-        <Script type="text/javascript" src="/static/script.js" />
         <Main />
         <NextScript />
+        <Script src="/static/script.js" strategy="lazyOnload"></Script>
         <Script id="vwoCode" strategy="beforeInteractive">
           {`window._vwo_code || (function() {
 var account_id=870022,
