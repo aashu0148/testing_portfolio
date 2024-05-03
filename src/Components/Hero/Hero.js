@@ -7,20 +7,20 @@ function Hero() {
     <div className={styles.container}>
       <div className={styles.detail}>
         <p
-          className={` animate-up ${styles.greetings}`}
+          className={` ${styles.greetings}`}
           style={{ animationDelay: `${700}ms` }}
         >
           Hey, My name is{" "}
         </p>
 
         <p
-          className={` animate-up ${styles.title}`}
+          className={` ${styles.title}`}
           style={{ animationDelay: `${700 + 200}ms` }}
         >
           Anshul
         </p>
         <p
-          className={` animate-up ${styles.subTitle}`}
+          className={`  ${styles.subTitle}`}
           style={{ animationDelay: `${700 + 200}ms` }}
         >
           I build apps for the Web
@@ -28,7 +28,7 @@ function Hero() {
       </div>
 
       <p
-        className={` animate-up ${styles.desc}`}
+        className={`  ${styles.desc}`}
         style={{ animationDelay: `${700 + 400}ms` }}
       >
         {/* Hi, I’m Anshul, a web developer with a passion for building
