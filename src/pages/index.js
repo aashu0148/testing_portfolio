@@ -9,7 +9,7 @@ import EmailDiv from "Components/EmailDiv/EmailDiv";
 
 let trailingElement, mouseMoveTimeout;
 export default function Home() {
-  const [pageLoading, setPageLoading] = useState(true);
+  const [pageLoading, setPageLoading] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
 
   const handleObserver = (entries) => {

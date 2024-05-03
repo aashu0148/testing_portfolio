@@ -15,7 +15,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Script src="/static/script.js" strategy="lazyOnload"></Script>
+        {/* <Script src="/static/script.js" strategy="lazyOnload"></Script> */}
         <Script id="vwoCode" strategy="beforeInteractive">
           {`window._vwo_code || (function() {
 var account_id=870022,
