@@ -15,7 +15,10 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Script strategy="beforeInteractive">{`window.PERMAR_ID="965495276891668491"`}</Script>
+        <Script
+          id="init-code"
+          strategy="beforeInteractive"
+        >{`window.PERMAR_ID="965495276891668491"`}</Script>
         <Script
           strategy="beforeInteractive"
           id="ab-test"
