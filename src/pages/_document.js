@@ -18,11 +18,11 @@ export default function Document() {
         <Script
           id="init-code"
           strategy="beforeInteractive"
-        >{`window.PERMAR_ID="975440199828733963"`}</Script>
+        >{`window.PERMAR_ID="975459083773181963"`}</Script>
         <Script
           strategy="beforeInteractive"
           id="ab-test"
-          src="https://dev.cdn.permar.xyz/scripts/dp/bundle.min.js"
+          src="https://cdn.permar.xyz/scripts/dp/bundle.min.js"
         />
         {/* <Script src="/static/script.js" strategy="lazyOnload"></Script> */}
         {/* <Script id="vwoCode" strategy="beforeInteractive">
