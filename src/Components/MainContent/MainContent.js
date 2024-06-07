@@ -12,9 +12,27 @@ function MainContent({ isMobileView = false }) {
   return (
     <main className={styles.container}>
       <Hero isMobileView={isMobileView} />
+
+      <button
+        className="button  animate-up"
+        style={{ animationDelay: `${700 + 600}ms` }}
+        onClick={() => fetch("https://dummyjson.com/products")}
+      >
+        Make dummy products api call
+      </button>
+
       <About isMobileView={isMobileView} />
       <WorkExp isMobileView={isMobileView} />
       <Projects isMobileView={isMobileView} />
+
+      <button
+        className="button  animate-up"
+        style={{ animationDelay: `${700 + 600}ms` }}
+        onClick={() => fetch("https://dummyjson.com/users")}
+      >
+        Make dummy users api call
+      </button>
+
       <Contact isMobileView={isMobileView} />
     </main>
   );
